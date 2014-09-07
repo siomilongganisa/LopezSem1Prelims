@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GO USTE!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="concertname">
+        <item>Select a Seat!</item>
+        <item>Gen Ad</item>
+        <item>Upper Box B</item>
+        <item>Upper Box A</item>
+        <item>Lower Box B</item>
+        <item>Lower Box A</item>
+        <item>Patron</item>
+        <item>VIP</item>
+        <item>Courtside</item>
+    </string-array>
+
+    <string-array name="tigernames">
+        <item>Select a Tiger!</item>
+        <item>Karim Abdul</item>
+        <item>Kevin Ferrer</item>
+        <item>Aljon Mariano</item>
+        <item>Paulo Pe</item>
+        <item>James Harden</item>
+        <item>Dadi Hadadi</item>
+        <item>Gabe Norwood</item>
+    </string-array>
+
+    <string-array name="foe">
+        <item>Select an Opponent!</item>
+        <item>ADMU</item>
+        <item>DLSU</item>
+        <item>FEU</item>
+        <item>NU</item>
+        <item>UE</item>
+        <item>AdU</item>
+        <item>UP</item>
+    </string-array>
+
+</resources>

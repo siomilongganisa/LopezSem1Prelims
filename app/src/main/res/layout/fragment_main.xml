@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment"
+    android:background="@drawable/ustebg2"
+    android:id="@+id/framee">
+
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tabHost"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffc502"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <RelativeLayout
+                    android:id="@+id/Tigers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="GO TIGERS!"
+                        android:id="@+id/gotigers"
+                        android:textSize="40dp"
+                        android:textColor="#fffffa00"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="68dp"
+                        android:textStyle="bold|normal"
+                        android:singleLine="false"
+                        android:textColorLink="#ff050505"
+                        android:shadowColor="#000000"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android="shadowRadius"
+                        android:textColorHighlight="#ff050505" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="13"
+                        android:id="@+id/tigerText"
+                        android:hint="Enter a Tiger or Select below"
+
+                        android:layout_gravity="center"
+                        android:layout_below="@+id/gotigers"
+                        android:layout_centerHorizontal="true"
+                        android:textColorHint="#fffffe00" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/selectTiger"
+                        android:entries="@array/tigernames"
+                        android:layout_gravity="center"
+                        android:layout_below="@+id/tigerText"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROAAARR!!!"
+                        android:id="@+id/tigerenter"
+                        android:textSize="25dp"
+                        android:layout_below="@+id/selectTiger"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tigerResult"
+                        android:text=""
+                        android:textSize="20dp"
+                        android:textColor="#ffffffff"
+                        android:layout_below="@+id/tigerenter"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="34dp"
+                        android:gravity="center"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Games"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="GO TIGERS!"
+                        android:id="@+id/gotigers"
+                        android:textSize="40dp"
+                        android:textColor="#fffffa00"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="68dp"
+                        android:textStyle="bold|normal"
+                        android:singleLine="false"
+                        android:textColorLink="#ff050505"
+                        android:shadowColor="#000000"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android="shadowRadius"
+                        android:textColorHighlight="#ff050505" />
+
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/selectFoe"
+                        android:entries="@array/foe"
+                        android:layout_gravity="center"
+                        android:layout_below="@+id/gotigers"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FIGHT!!!"
+                        android:id="@+id/fight"
+                        android:textSize="25dp"
+                        android:layout_below="@+id/selectFoe"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="37dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/foeResult"
+                        android:text=""
+                        android:textSize="20dp"
+                        android:textColor="#ffffffff"
+                        android:layout_below="@+id/fight"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="34dp"
+                        android:gravity="center"/>
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Tickets"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="GO USTE!"
+                        android:id="@+id/txtTickets"
+                        android:textSize="40dp"
+                        android:textColor="#fffffa00"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="68dp"
+                        android:textStyle="bold"
+                        android:singleLine="false" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/txtNoTickets"
+                        android:hint="How many tickets?"
+                        android:layout_below="@+id/txtTickets"
+                        android:layout_centerHorizontal="true"
+                        android:textColorHint="#fffffe00" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtGroup"
+                        android:entries="@array/concertname"
+                        android:layout_marginTop="23dp"
+                        android:layout_gravity="center"
+                        android:layout_below="@+id/txtNoTickets"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cost of Ticket"
+                        android:id="@+id/ticketcost"
+                        android:textSize="25dp"
+                        android:layout_below="@+id/txtGroup"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtResult"
+                        android:textSize="20dp"
+                        android:textColor="#ffffffff"
+                        android:layout_below="@+id/ticketcost"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="34dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </TabHost>
+
+
+</RelativeLayout>
