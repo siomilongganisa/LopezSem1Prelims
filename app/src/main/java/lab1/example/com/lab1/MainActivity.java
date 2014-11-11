@@ -26,7 +26,7 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends ActionBarActivity {
 
- double costPerTicket = 250.00;
+ double costPerTicket = 0.00;
     int numberOfTickets;
    double totalCost;
     String groupChoice;
@@ -70,11 +70,33 @@ public class MainActivity extends ActionBarActivity {
             @Override
 
             public void onClick(View v) {
-                numberOfTickets = Integer.parseInt(tickets.getText().toString());
-                totalCost= costPerTicket*numberOfTickets;
-                DecimalFormat currency = new DecimalFormat("Php###,###.##");
+                numberOfTickets = 0;
+                String tik = tickets.getText().toString();
                 groupChoice = Group.getSelectedItem().toString();
-                result.setText("Seat: "+groupChoice+"\n Cost: "+currency.format(totalCost) + "\nWhere to buy: TYK and Araneta Coliseum" );    //result.setText("You selected "+groupChoice+" !!! ");
+
+                if (groupChoice.compareTo("Gen Ad") == 0 ) {
+                    costPerTicket = 150.00;}
+                if (groupChoice.compareTo("Upper Box B") == 0 ) {
+                    costPerTicket = 200.00;}
+                if (groupChoice.compareTo("Upper Box A") == 0 ) {
+                    costPerTicket = 250.00;}
+                if (groupChoice.compareTo("Lower Box B") == 0 ) {
+                    costPerTicket = 350.00;}
+                if (groupChoice.compareTo("Lower Box A") == 0 ) {
+                    costPerTicket = 450.00;}
+                if (groupChoice.compareTo("Patron") == 0 ) {
+                    costPerTicket = 600;}
+                if (groupChoice.compareTo("Courtside") == 0 ) {
+                    costPerTicket = 800.00;}
+                if (tickets.getText().length() != 0){
+                    numberOfTickets = Integer.parseInt(tickets.getText().toString());
+                }
+
+
+               totalCost= costPerTicket*numberOfTickets;
+            DecimalFormat currency = new DecimalFormat("Php###,###.##");
+
+                result.setText("Seat: "+groupChoice+"\n Cost: "+currency.format(totalCost) + "\nWhere to buy: TYK, Araneta Coliseum or SM Tickets" );    //result.setText("You selected "+groupChoice+" !!! ");
             }
         });
 
@@ -89,7 +111,25 @@ public class MainActivity extends ActionBarActivity {
 
             public void onClick(View v) {
                 groupChoice = Grup.getSelectedItem().toString();
-                reslt.setText("Player: " +groupChoice+ "\nPosition: All positions \nProfile: "+groupChoice+" plays at his best every game.");    //result.setText("You selected "+groupChoice+" !!! ");
+                String pos = null;
+                String pro = null;
+                if (groupChoice.compareTo("Karim Abdul") == 0 || groupChoice.compareTo("Paolo Pe") == 0) {
+                    pos = " Center";
+                    pro = " is the tower of Growling Tigers, the gigantic guardian of the basket.";}
+                if (groupChoice.compareTo("Aljon Mariano") == 0 || groupChoice.compareTo("Kent Lao") == 0) {
+                    pos = " Power Forward";
+                    pro = " is the power of the Tigers' offense! He attacks the basket without hesitations ";}
+                if (groupChoice.compareTo("Kevin Ferrer") == 0 || groupChoice.compareTo("Kim Lo") == 0) {
+                    pos = " Small Forward";
+                    pro = " is the sniper of the Growling Tigers. He can shoot from anywhere from beyond the arc";}
+                if (groupChoice.compareTo("Edgardo Daquioag") == 0 || groupChoice.compareTo("Louie Vigil") == 0) {
+                    pos = " Shooting Forward";
+                    pro = " is the scorer of the team. He makes baskets for the Tigers!";}
+                if (groupChoice.compareTo("Jamil Sheriff") == 0 || groupChoice.compareTo("Henri Subido") == 0) {
+                    pos = " Point Guard";
+                    pro = " is the playmaker of the Tigers. He is excellent in controlling the ball.";}
+
+                reslt.setText("Player: " + groupChoice + "\nPosition:" + pos + "\nProfile: " + groupChoice + pro);    //result.setText("You selected "+groupChoice+" !!! ");
 
             }
         });
@@ -102,8 +142,17 @@ public class MainActivity extends ActionBarActivity {
             @Override
 
             public void onClick(View v) {
+                String wer = null;
+
                 groupChoice = oppo.getSelectedItem().toString();
-                reslt2.setText("UST vs " +groupChoice+ "\n Date: September 18, 2014 \n Where: Araneta Coliseum ");
+                if (groupChoice.compareTo("ADMU") == 0 || groupChoice.compareTo("DLSU") == 0 || groupChoice.compareTo("FEU") == 0){
+                    wer = "Araneta Coliseum";
+
+                }
+                else{
+                    wer = "MOA Arena";
+                }
+                reslt2.setText("UST vs " +groupChoice+ "\n Date: September 18, 2015 \n Where: " + wer);
             }
         });
 
